@@ -14,6 +14,8 @@ on:
   issues:
     types: [opened, assigned]
 
+permissions: {}
+
 jobs:
   claude:
     if: |

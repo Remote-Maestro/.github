@@ -1,0 +1,33 @@
+name: Tâche OpenCode
+description: Tâche précise confiée à l'agent OpenCode (ADR 0005), lancée en commentant « /oc implémente cette issue »
+title: "OpenCode : "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Une fois l'issue créée, la lancer par un commentaire qui **commence** par `/oc ` (ex. `/oc implémente cette issue`).
+        Disponible uniquement dans les repos où le workflow `opencode.yml` est installé (pilote : `maestro-workspace`).
+  - type: textarea
+    id: task
+    attributes:
+      label: À faire
+      description: Fichiers concernés et modification attendue, le plus précisément possible.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] Seuls ces fichiers sont modifiés : …
+        - [ ] Vérification : …
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Message de commit exact (Conventional Commits, en anglais)
+      description: OpenCode doit committer lui-même avec ce message ; il sert aussi de titre de PR.
+      placeholder: "docs: mention OpenCode executor in CLAUDE.md"
+    validations:
+      required: true

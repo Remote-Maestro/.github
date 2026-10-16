@@ -1,0 +1,6 @@
+{
+  "name": "Lint (Super-Linter)",
+  "description": "Revue automatique gratuite des PR : linters et détection de secrets sur les fichiers modifiés.",
+  "iconName": "octicon checklist",
+  "categories": ["Code Quality"]
+}

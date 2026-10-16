@@ -1,7 +1,8 @@
 name: Claude
 
 # Mentionner @claude dans une issue, une PR ou un commentaire de revue pour solliciter Claude Code.
-# Secret requis (niveau org conseillé) : ANTHROPIC_API_KEY  — ou CLAUDE_CODE_OAUTH_TOKEN.
+# Utilise l'abonnement Claude (Pro/Max) via le secret d'org CLAUDE_CODE_OAUTH_TOKEN (`claude setup-token`).
+# Sobriété : déclenché uniquement sur mention explicite, modèle Sonnet, nombre de tours plafonné.
 
 on:
   issue_comment:
@@ -34,4 +35,5 @@ jobs:
           lfs: false
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: --model sonnet --max-turns 10

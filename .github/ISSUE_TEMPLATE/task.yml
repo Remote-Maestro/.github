@@ -9,6 +9,8 @@ body:
         **commence** par :
         - `/oc implémente cette issue` : OpenCode, modèle gratuit (repos qui ont le workflow `opencode.yml`) ;
         - `@claude implémente cette issue` : Claude (Sonnet), si la tâche demande du jugement.
+        Pas d'OpenCode pour une tâche qui touche aux secrets, à la crypto ou à la sécurité (clés, signature,
+        appairage, chiffrement) : le filtre de contenu du modèle gratuit la bloque, et ce code reste à Claude.
         Une spec qui ne tient pas ici est une tâche à découper.
   - type: textarea
     id: task

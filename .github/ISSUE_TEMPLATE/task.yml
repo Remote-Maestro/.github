@@ -1,0 +1,38 @@
+name: Tâche spécifiée
+description: Tâche précise et vérifiable, confiée à l'exécutant le moins coûteux (OpenCode, @claude, delegate.py) — ADR 0006
+title: "Tâche : "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ce formulaire est la spécification unique, quel que soit l'exécutant. Lancer par un commentaire qui
+        **commence** par :
+        - `/oc implémente cette issue` : OpenCode, modèle gratuit (repos qui ont le workflow `opencode.yml`) ;
+        - `@claude implémente cette issue` : Claude (Sonnet), si la tâche demande du jugement.
+        Une spec qui ne tient pas ici est une tâche à découper.
+  - type: textarea
+    id: task
+    attributes:
+      label: À faire
+      description: Fichiers concernés et modification attendue, le plus précisément possible (signatures, formats).
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      description: Des commandes qui doivent passer, plutôt que du texte à interpréter.
+      placeholder: |
+        - [ ] Seuls ces fichiers sont modifiés : …
+        - [ ] `python -m unittest discover -s scripts/tests` passe
+        - [ ] Autre commande de vérification : …
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Message de commit exact (Conventional Commits, en anglais)
+      description: L'exécutant doit committer avec ce message ; il sert aussi de titre de PR.
+      placeholder: "docs: mention OpenCode executor in CLAUDE.md"
+    validations:
+      required: true

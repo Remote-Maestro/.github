@@ -1,0 +1,6 @@
+{
+  "name": "Claude Code",
+  "description": "Réagit aux mentions @claude dans les issues et PR (analyse, implémentation, revue).",
+  "iconName": "octicon comment-discussion",
+  "categories": ["Automation"]
+}

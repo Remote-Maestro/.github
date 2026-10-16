@@ -1,0 +1,6 @@
+{
+  "name": "PR title lint",
+  "description": "Impose le format Conventional Commits sur les titres de Pull Request.",
+  "iconName": "octicon git-pull-request",
+  "categories": ["Automation"]
+}

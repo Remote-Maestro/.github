@@ -1,0 +1,37 @@
+name: Bug
+description: Un comportement incorrect du logiciel ou du firmware
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Que se passe-t-il ?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Firmware / logiciel / révision matérielle
+      placeholder: "firmware v0.3.1, PCB rev-A, dock v0.2.0"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      render: shell

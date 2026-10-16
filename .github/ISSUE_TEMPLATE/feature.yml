@@ -1,0 +1,25 @@
+name: Fonctionnalité
+description: Proposer une nouvelle fonctionnalité ou une amélioration
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème / besoin utilisateur
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+  - type: dropdown
+    id: area
+    attributes:
+      label: Sous-ensembles concernés
+      multiple: true
+      options: [firmware, hardware, mechanical, dock, app, protocol]
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: "- [ ] …"

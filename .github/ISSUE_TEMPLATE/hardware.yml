@@ -1,0 +1,33 @@
+name: Matériel
+description: Problème ou évolution électronique / mécanique (PCB, BOM, boîtier)
+labels: ["type:hardware"]
+body:
+  - type: input
+    id: revision
+    attributes:
+      label: Révision concernée
+      placeholder: "rev-A"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Nature
+      options: [Erreur de schéma, Erreur de routage / DRC, Composant (dispo / EOL / BOM), Mécanique / ajustement, Évolution]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Désignateurs, nets, cotes, photos/mesures
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Contournement (rework) possible ?
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact firmware / mécanique
